@@ -5,7 +5,7 @@ import {render} from "react-dom";
 
 class App extends React.Component {
 	render () {
-		return <div><App1/><App2/></div>;
+		return <div><App2/><App1/></div>;
 	}
 }
 
