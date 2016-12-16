@@ -3,19 +3,25 @@ var path = require('path');
 
 var BUILD_DIR = path.resolve(__dirname, 'src/client/public');
 var APP_DIR = path.resolve(__dirname, 'src/client/app');
+var TEST_DIR = path.resolve(__dirname, 'src/client/test');
+
 
 var config = {
-  entry: APP_DIR + '/index.jsx',
+  entry: {
+	  test: TEST_DIR + '/index.jsx'/*,
+	  app: 	APP_DIR + '/index.jsx'
+	  */
+  },
   output: {
     path: BUILD_DIR,
-    filename: 'bundle.js'
+    filename: "[name].bundle.js"
   },
   
   module : {
     loaders : [
       {
         test : /\.jsx?/,
-        include : APP_DIR,
+        include : TEST_DIR, /*APP_DIR*/
         loader : 'babel'
       }
     ]
