@@ -2,7 +2,7 @@ var express = require('express');
 var http = require('http');
 var app = express();
 var path = require('path');
-var reload = require('reload');
+var  reload = require('reload');
 
  var publicDir = path.join(__dirname, 'public');
 
